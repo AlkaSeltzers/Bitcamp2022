@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AlkaSeltzers/Bitcamp2022#readme",
   "dependencies": {
+    "chart.js": "^3.7.1",
     "express": "^4.17.3",
     "fs": "^0.0.1-security",
     "hbs": "^4.2.0",
