@@ -3,7 +3,7 @@
     margin: 0;
   }
   .top-nav {
-    background-color: #307579;
+    background-image: linear-gradient(to bottom right, #052f31, #307579);
     min-height: 15%;
     display: flex;
     flex-direction: row;
@@ -22,7 +22,7 @@
 }
 
 .top-nav-right {
-    min-height: 15vh;
+    min-height: 15%;
     display: flex;
     flex-direction:row;
     vertical-align: center;
@@ -43,7 +43,7 @@
 
 .body-bg {
     background-image:url("images/main.jpg");
-    min-height: 75%;
+    min-height: 100%;
     display: flex;
     flex-direction: row;
     justify-content:center;
@@ -103,13 +103,11 @@ a:link {
 }
 
 input, select, textarea{
-    color: #307579;
+    color: gray;
     font-size: 30px;
+    height: 45px;
     align-items: center;
+    justify-content: center;
+    text-align:center;
 }
 
-textarea:focus, input:focus {
-    color: #307579;
-    font-size: 30px;
-    align-self: center;
-}
