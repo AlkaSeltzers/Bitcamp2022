@@ -4,7 +4,7 @@
   }
   .top-nav {
     background-color: #307579;
-    min-height: 15vh;
+    min-height: 15%;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -14,7 +14,7 @@
 }
 
 .top-nav-left {
-    min-height: 15vh;
+    min-height: 15%;
     padding-left: 20px;
     display: flex;
     flex-direction:row;
@@ -41,30 +41,75 @@
     color:white;
 }
 
+.body-bg {
+    background-image:url("images/main.jpg");
+    min-height: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    font-family: "Verdana";
+    font-style: "bold";
+    margin: 30px;
+}
+
+.box-bg{
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    opacity:90%;
+    color:#307579;
+    display: flex;
+    flex-direction: row;
+}
+
+#bodybtn {
+    background-color:#307579;
+    border-color:#307579;
+    color: white;
+    border-radius: 20%;
+    padding: 15px;
+    margin-left: 10px;
+
+}
+
 a:link {
     color: white;
+    padding:10px;
     background-color: transparent;
     text-decoration: none;
   }
 
   a:visited {
     color: white;
+    padding:10px;
     background-color: transparent;
     text-decoration: none;
   }
 
   a:hover {
-    color: white;
+    color: 307579;
+    padding:10px;
     background-color: white;
-    opacity: 50%;
-    text-decoration: underline;
+    opacity: 70%;
   }
-
 
 .logo {
     width: 70px;
     height: 70px;
-    padding: 20px;
-    align-items: left;
+    padding: 30px;
+}
 
+input, select, textarea{
+    color: #307579;
+    font-size: 30px;
+    align-items: center;
+}
+
+textarea:focus, input:focus {
+    color: #307579;
+    font-size: 30px;
+    align-self: center;
 }
