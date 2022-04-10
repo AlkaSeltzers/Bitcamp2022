@@ -17,10 +17,7 @@ module.exports.set = function(app){
     }
 
     app.get('/data_vis', [getVars], function(req, res){
-        console.log(res.locals.zipcode);
         res.render("dataVis", {data: res.locals.obj, zipcode:res.locals.zipcode});
-        
-        //res.render("dataVis");
     });
 
 };

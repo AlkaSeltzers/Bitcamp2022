@@ -1,4 +1,3 @@
-zipcode = 20003
 plot_data = []
 max_nob = 0;
 max_price = 0;
@@ -32,6 +31,7 @@ document.getElementById("average2").innerHTML = "Average Number of Bedrooms: " +
 
 
 max_price = Math.ceil(max_price / 50000) * 50000;
+max_nob = Math.ceil(max_nob / 5) * 5;
 
 new Chart("myChart", {
 type: "scatter",
