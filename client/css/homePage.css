@@ -43,11 +43,6 @@
     color: white;
 }
 
-.title {
-    align-self: center;
-    color:white;
-}
-
 .body-bg {
     background-image:url("images/main.jpg");
     min-height: 100%;
