@@ -13,6 +13,11 @@
     font-style: "bold";
 }
 
+#myChart {
+    width:100%;
+    align-self: center;
+}
+
 .top-nav-left {
     min-height: 15%;
     padding-left: 20px;
