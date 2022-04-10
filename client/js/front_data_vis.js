@@ -1,7 +1,10 @@
-zipcode = 20009
+zipcode = 20003
 plot_data = []
 max_nob = 0;
 max_price = 0;
+count = 0;
+sum_nob = 0;
+sum_price = 0;
 
 data.forEach(element => {
     if (element["zipcode"] == zipcode){
@@ -15,10 +18,21 @@ data.forEach(element => {
         if (a > max_price){
             max_price = a
         }
+        count += 1;
+        sum_nob += element['nob']
+        sum_price += a
+
         plot_data.push(obj)    
     }
 });
-  
+
+document.getElementById("average").innerHTML = "Average Price per Room: " + Math.round(sum_price/count)
+                                                
+document.getElementById("average2").innerHTML = "Average Number of Bedrooms: " + Math.round(sum_nob/count)
+
+
+max_price = Math.ceil(max_price / 50000) * 50000;
+
 new Chart("myChart", {
 type: "scatter",
 data: {
@@ -28,7 +42,6 @@ data: {
     data: plot_data
     }]
 },
-//ADD TITLES
 options: {
     legend: {display: false},
     scales: {
