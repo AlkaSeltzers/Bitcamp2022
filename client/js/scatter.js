@@ -25,10 +25,12 @@ data.forEach(element => {
     }
 });
 
-document.getElementById("average").innerHTML = "Average Price per Room: " + Math.round(sum_price/count)
-                                                
-document.getElementById("average2").innerHTML = "Average Number of Bedrooms: " + Math.round(sum_nob/count)
-
+if(count == 0){
+    document.getElementById("average").innerHTML = "INVALID ZIPCODE"    
+}else{
+    document.getElementById("average").innerHTML = "Average Price per Room: " + Math.round(sum_price/count)                                             
+    document.getElementById("average2").innerHTML = "Average Number of Bedrooms: " + Math.round(sum_nob/count)
+}
 
 max_price = Math.ceil(max_price / 50000) * 50000;
 max_nob = Math.ceil(max_nob / 5) * 5;
@@ -38,7 +40,7 @@ type: "scatter",
 data: {
     datasets: [{
     pointRadius: 4,
-    pointBackgroundColor: "rgb(0,0,255)",
+    pointBackgroundColor: "#88bfc2",
     data: plot_data
     }]
 },
@@ -66,7 +68,7 @@ options: {
     },
     title: {
     display: true,
-    text: "Houses in Zip Code:" + String(zipcode),
+    text: "Houses in Zip Code: " + String(zipcode),
     fontSize: 16
     }
 }

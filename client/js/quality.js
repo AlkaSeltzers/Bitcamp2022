@@ -30,10 +30,28 @@ new Chart("myChart2", {
         }]
       },   
     options: {
-    legend: {display: false},
-    title: {
-        display: true,
-        text: "Average Price Per Room by Quality"
-    }
+        legend: {display: false},
+        title: {
+            display: true,
+            text: "Average Price Per Room by Quality"
+        },
+        scales: {
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Price per Room',
+                fontSize: 12,
+                fontStyle: 'bold'
+              }
+            }],
+            xAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Quality Ranking',
+                  fontSize: 12,
+                    fontStyle: 'bold'
+                }
+              }]
+          }
     }
 });
