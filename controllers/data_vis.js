@@ -6,10 +6,11 @@ exports.middleWare = function(req, res, next){
     var obj = JSON.parse(body)
     res.locals.obj = obj
     next()
-}
+};
 
 module.exports.set = function(app){
     app.get('/data_vis', function(req, res){
-        res.render("dataVis,", {data: res.locals.obj});
+        res.render("dataVis", {data: "hello"});
+        //res.render("dataVis");
     });
 };
