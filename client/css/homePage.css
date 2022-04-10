@@ -13,12 +13,6 @@
     font-style: "bold";
 }
 
-#myChart {
-    width:100%;
-    max-width:900px;
-    padding-left: 50px;
-}
-
 .top-nav-left {
     min-height: 15%;
     padding-left: 50px;
@@ -94,6 +88,21 @@
     padding: 15px;
     margin-left: 10px;
 
+}
+
+#myChart {
+    min-width:700px;
+}
+
+#myChart2 {
+    min-width:700px;
+}
+
+.graphics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
 }
 
 a:link {
