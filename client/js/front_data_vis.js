@@ -1,11 +1,11 @@
 zipcode = 20009
 plot_data = []
 
-mydata.forEach(element => {
+data.forEach(element => {
     if (element["zipcode"] == zipcode){
         obj = {}
-        obj[x] = element["price"]/element["nob"]
-        obj[y] = element["nob"]
+        obj["x"] = element["price"]/element["nob"]
+        obj["y"] = element["nob"]
         plot_data.push(obj)    
     }
 });
