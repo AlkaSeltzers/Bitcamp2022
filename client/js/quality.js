@@ -52,6 +52,14 @@ new Chart("myChart2", {
                     fontStyle: 'bold'
                 }
               }]
-          }
+          },
+          tooltips: {
+            callbacks: {
+               label: function(t, d) {
+                  var yLabel = t.yLabel;
+                  return " " + counts[avg.indexOf(yLabel)] + " Apartments";
+               }
+            }
+         }
     }
 });

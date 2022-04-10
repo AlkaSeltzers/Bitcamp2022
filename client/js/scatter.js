@@ -70,6 +70,14 @@ options: {
     display: true,
     text: "Houses in Zip Code: " + String(zipcode),
     fontSize: 16
-    }
+    },
+    tooltips: {
+        callbacks: {
+           label: function(tooltipItem, data) {
+            var label = data.labels[tooltipItem.index];
+            return '(' + (tooltipItem.xLabel).toFixed(3) + ', ' + tooltipItem.yLabel + ')';
+            }
+        }
+     }
 }
 });
