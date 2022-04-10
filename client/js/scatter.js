@@ -39,7 +39,7 @@ new Chart("myChart", {
 type: "scatter",
 data: {
     datasets: [{
-    pointRadius: 4,
+    pointRadius: 2.5,
     pointBackgroundColor: "#88c28d",
     data: plot_data
     }]
