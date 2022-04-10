@@ -1,5 +1,4 @@
 num = 12
-avg = Array(num).fill(0);
 counts = Array(num).fill(0);
 var xValues = ["Low Quality", "Average", "Fair Quality", "Good Quality", "Above Average", "Very Good", 
                 "Excellent", "Superior", "Exceptional-A", "Exceptional-B", "Exceptional-C", "Exceptional-D"];
@@ -7,37 +6,31 @@ var xValues = ["Low Quality", "Average", "Fair Quality", "Good Quality", "Above 
 data.forEach(element => {
     if (element["zipcode"] == zipcode){
         i = xValues.indexOf(element["grade"])
-        price = element['price']/element['nob']
         counts[i] += 1;
-        avg[i] += price
     }
 });
 
-for(i = 0; i < num; i++){
-    avg[i] = avg[i]/counts[i]
-}
-
-new Chart("myChart2", {
+new Chart("myChart4", {
     type: "bar",
     data: {
         labels: xValues,
         datasets: [{
-          backgroundColor: "#88c28d",
-          data: avg
+          backgroundColor: "#88bfc2",
+          data: counts
         }]
       },   
     options: {
         legend: {display: false},
         title: {
             display: true,
-            text: "Average Price Per Room by Quality",
+            text: "Number of Apartments by Quality",
             fontSize: 24
         },
         scales: {
             yAxes: [{
               scaleLabel: {
                 display: true,
-                labelString: 'Price per Room',
+                labelString: '# of Apartments',
                 fontSize: 12,
                 fontStyle: 'bold'
               }
@@ -51,13 +44,5 @@ new Chart("myChart2", {
                 }
               }]
           },
-          tooltips: {
-            callbacks: {
-               label: function(t, d) {
-                  var yLabel = t.yLabel;
-                  return " " + counts[avg.indexOf(yLabel)] + " Apartments";
-               }
-            }
-         }
     }
 });

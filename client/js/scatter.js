@@ -40,7 +40,7 @@ type: "scatter",
 data: {
     datasets: [{
     pointRadius: 4,
-    pointBackgroundColor: "#88bfc2",
+    pointBackgroundColor: "#88c28d",
     data: plot_data
     }]
 },
@@ -68,8 +68,8 @@ options: {
     },
     title: {
     display: true,
-    text: "Houses in Zip Code: " + String(zipcode),
-    fontSize: 16
+    text: "Houses in Zip Code",
+    fontSize: 24
     },
     tooltips: {
         callbacks: {
