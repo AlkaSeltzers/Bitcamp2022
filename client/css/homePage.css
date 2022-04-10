@@ -67,6 +67,24 @@
     flex-direction: row;
 }
 
+.box-about{
+    background-color: white;
+    border-radius: 20px;
+    width: 50%;
+    height: 30%;
+    margin: 50px;
+    padding: 50px;
+    font-size: 20px;
+    line-height: 30px;
+    opacity:80%;
+    color:#307579;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #bodybtn {
     background-color:#307579;
     border-color:#307579;
