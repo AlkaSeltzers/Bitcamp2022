@@ -12,7 +12,6 @@ module.exports.set = function(app){
 
     function getVars(req, res, next){
         res.locals.zipcode = req.query.zipcode;
-        console.log(req.query.zipcode);
         next();
     }
 
