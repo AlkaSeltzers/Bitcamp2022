@@ -19,6 +19,8 @@ data.forEach(element => {
     }
 });
   
+max_price = Math.ceil(max_price / 50000) * 50000;
+
 new Chart("myChart", {
 type: "scatter",
 data: {
@@ -28,7 +30,6 @@ data: {
     data: plot_data
     }]
 },
-//ADD TITLES
 options: {
     legend: {display: false},
     scales: {
